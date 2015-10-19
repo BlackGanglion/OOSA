@@ -1,0 +1,37 @@
+[
+  {
+    "time": 1445238608,
+    "data": [
+      {
+        "id": 1,
+        "brandName": "Nutrilon/诺优能(牛栏)",
+        "sales": 12345
+      },
+      {
+        "id": 2,
+        "brandName": "Aptamil",
+        "sales": 13434
+      },
+      {
+        "id": 3,
+        "brandName": "Wyeth/惠氏",
+        "sales": 5560
+      },
+      {
+        "id": 4,
+        "brandName": "Bellamy’s/贝拉米",
+        "sales": 8965
+      },
+      {
+        "id": 5,
+        "brandName": "Friso/美素佳儿",
+        "sales": 5030
+      },
+      {
+        "id": 6,
+        "brandName": "Cow & Gate",
+        "sales": 17594
+      }
+    ]
+  }
+]
