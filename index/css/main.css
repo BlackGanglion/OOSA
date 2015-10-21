@@ -72,9 +72,12 @@ ul li a{
 .nav .img-nav img{
   width: 100%;
   height: 400px;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .nav .img-nav img:hover{
   opacity: 1;
+  -webkit-box-shadow:0 0 15px 0 rgb(42, 100, 150);
+  -moz-box-shadow:0 0 15px 0 rgb(42, 100, 150);
+  box-shadow:0 0 15px 0 rgb(42, 100, 150);
 }
