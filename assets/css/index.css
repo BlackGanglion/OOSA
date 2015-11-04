@@ -1,17 +1,14 @@
 /*  ＊号表示全局使用  */
-*{
+body{
   font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  background-size: 100% auto;
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1, div{
   margin: 0;
-}
-
-.search{
-  background-size: 100% auto;
-  background-image: url(../images/main.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .title{
@@ -64,20 +61,30 @@ ul li a{
   color: white;
 }
 
-.nav .img-nav{
-  width: 19.5%;
-  display: inline-block;
+.show-img{
+  display: -webkit-flex;
+  display: flex;
 }
 
-.nav .img-nav img{
-  width: 100%;
-  height: 400px;
+.show-element{
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.show-element img{
+  width: 60%;
   opacity: 0.6;
 }
 
-.nav .img-nav img:hover{
+.show-element img:hover{
+  width: 80%;
   opacity: 1;
-  -webkit-box-shadow:0 0 15px 0 rgb(42, 100, 150);
-  -moz-box-shadow:0 0 15px 0 rgb(42, 100, 150);
-  box-shadow:0 0 15px 0 rgb(42, 100, 150);
+}
+
+.show-element h3{
+  font-weight: bold;
+  color: #fff;
 }

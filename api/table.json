@@ -1,0 +1,16 @@
+﻿{
+	"name":"市场占有率饼图",
+	"data":
+	[
+		{"productid":"1","productname":"Mead Johnson/美赞臣","monthsale":"6143"},
+		{"productid":"2","productname":"Cow  Gate","monthsale":"6405"},
+		{"productid":"3","productname":"Hipp/喜宝","monthsale":"7962"},
+		{"productid":"4","productname":"Hero Baby/天赋力","monthsale":"8558"},
+		{"productid":"5","productname":"Wyeth/惠氏","monthsale":"11273"},
+		{"productid":"6","productname":"Nutrilon/诺优能","monthsale":"71303"},
+		{"productid":"7","productname":"Aptamil","monthsale":"72232"},
+		{"productid":"8","productname":"Friso/美素佳儿","monthsale":"49075"},
+		{"productid":"9","productname":"Bellamy’s/贝拉米","monthsale":"14363"},
+		{"productid":"10","productname":"KARICARE/可瑞康","monthsale":"14153"}
+	]
+}
