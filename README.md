@@ -21,7 +21,7 @@ API: php
 
 * RESTful API
 
-**1. 获取商品类别列表**
+**1. 获取类别列表**
 ###### 接口功能
 > 获取商品类别列表
 
@@ -38,11 +38,33 @@ API: php
 > null
 
 ###### 返回字段
-> |返回字段|字段类型|说明                              |
-|:-----   |:------|:-----------------------------   |
-|status   |int    |0：正常；1：错误。   |
-|id  |int | 类别编号                      |
-|name |string |类别名称                         |
+> <table>
+  <thead>
+    <tr style="font-weight: bold;">
+      <th colspan="2">返回字段</th>
+      <th>字段类型</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">status</td>
+      <td>int</td>
+      <td>0: 正常; 1: 错误</td>
+    </tr>
+    <tr>
+      <td rowspan="2">type</td>
+      <td>id</td>
+      <td>int</td>
+      <td>类别编号</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td>类别名称</td>
+    </tr>
+  </tbody>
+</table>
 
 ###### 接口示例
 > 地址：/api/typelist.php
@@ -57,6 +79,86 @@ API: php
       {
         "id": 2,
         "name": "纸尿裤"
+      }
+    ]
+}
+```
+
+**2. 获取品牌列表**
+###### 接口功能
+> 获取商品品牌列表
+
+###### URL
+> /api/brandlist.php
+
+###### 支持格式
+> JSON
+
+###### HTTP请求方式
+> GET
+
+###### 请求参数
+> <table>
+  <thead>
+    <tr style="font-weight: bold;">
+      <th>参数</th>
+      <th>必选</th>
+      <th>类型</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>true</td>
+      <td>int</td>
+      <td>商品类别的编号</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 返回字段
+> <table>
+  <thead>
+    <tr style="font-weight: bold;">
+      <th colspan="2">返回字段</th>
+      <th>字段类型</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">status</td>
+      <td>int</td>
+      <td>0: 正常; 1: 错误</td>
+    </tr>
+    <tr>
+      <td rowspan="2">brand</td>
+      <td>id</td>
+      <td>int</td>
+      <td>品牌编号</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>string</td>
+      <td>品牌名称</td>
+    </tr>
+  </tbody>
+</table>
+
+###### 接口示例
+> 地址：/api/typelist.php?type=1
+``` javascript
+{
+    "statue": 0,
+    "brand": [
+      {
+        "id": 1,
+        "name": "Nutrilon/诺优能(牛栏)"
+      },
+      {
+        "id": 2,
+        "name": "Bellamys贝拉米"
       }
     ]
 }
@@ -124,3 +226,4 @@ API: php
 * 销量数据图、数据表的绘制
 
 * 呈现页面的设计与美化
+
