@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--
-        css 样式建议写在单独的一个文件中, 不要镶嵌在html里
-        <style type="text/css">
-            .CSS1{
-                font-size: 25px;
-                font-family: "宋体";
-                font-weight: bold;
-                color:#0000CC;
-            }
-        </style>
-        -->
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <!-- normalize.css 用于消除浏览器本身带有的样式 -->
         <link rel="stylesheet" href="assets/css/normalize.css" media="screen">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" media="screen">
         <link rel="stylesheet" href="assets/css/index.css" media="screen">
     </head>
     <body>
-        <!--
-        页面划分为两部分，第一部分是大标题＋搜索框，第二部分是导航与相应的图片
-        尽量不要用表格去划分
-        -->
         <div class="search">
           <h1 class="title">基于海淘的数据分析与可视化</h1>
           <div class="search-main">
-            <form action="#" method="post" name="search-content">
-              <input id="search-input" name="wenben" type="search" placeholder="请输入想要比较的物品名称">
-              <button id="search-submit" type="submit" name="button">搜索</button>
+            <div class="select-type">
+              <div class="select-element active" id="select-brand">
+                <span>品牌</span>
+              </div>
+              <div class="select-element" id="select-shop">
+                <span>店铺</span>
+              </div>
+            </div>
+            <form action="#" method="post" name="search-content" id="submit-brand">
+              <input class="search-input" name="wenben" type="search" placeholder="请输入品牌名称">
+              <button class="search-submit" type="submit" name="button">搜索</button>
+            </form>
+            <form action="#" method="post" name="search-content" id="submit-shop" class="hide">
+              <input class="search-input" name="wenben" type="search" placeholder="请输入店铺名称">
+              <button class="search-submit" type="submit" name="button">搜索</button>
             </form>
             <ul>
               <li>热门搜索:</li>
@@ -40,19 +36,61 @@
             </ul>
           </div>
         </div>
-        <div class="show-img">
-          <div class="show-element">
-            <img src="assets/images/show1.png" class="img-circle img-thumbnail" />
-            <h3>同类品牌</h3>
+
+        <div class="show-function">
+          <div class="show-title">
+            <h1 class="title">四大功能</h1>
           </div>
-          <div class="show-element">
-            <img src="assets/images/show2.png" class="img-circle img-thumbnail" />
-            <h3>旗下产品</h3>
-          </div>
-          <div class="show-element">
-            <img src="assets/images/show3.png" class="img-circle img-thumbnail" />
-            <h3>同品比价</h3>
+          <div class="show-img">
+            <div class="show-element">
+              <img src="assets/images/show1.png" class="img-circle img-thumbnail" />
+              <h3>同类品牌</h3>
+            </div>
+            <div class="show-element">
+              <img src="assets/images/show2.png" class="img-circle img-thumbnail" />
+              <h3>旗下产品</h3>
+            </div>
+            <div class="show-element">
+              <img src="assets/images/show3.png" class="img-circle img-thumbnail" />
+              <h3>同品比价</h3>
+            </div>
+            <div class="show-element">
+              <img src="assets/images/show4.png" class="img-circle img-thumbnail" />
+              <h3>店铺PK</h3>
+            </div>
           </div>
         </div>
+
+        <div class="data">
+          <div class="show-title">
+            <h1 class="title">让数据说话</h1>
+          </div>
+          <div class="data-show">
+            <div class="data-element">
+              <div class="data-word" id="word-1">
+                <div class="data-word-show-1">
+                  <h1>基于大数据</h1>
+                  <h1>实时获取</h1>
+                </div>
+              </div>
+              <div class="data-pic" id="pic-1">
+              </div>
+            </div>
+            <div class="data-element">
+              <div class="data-pic" id="pic-2">
+              </div>
+              <div class="data-word" id="word-2">
+                <div class="data-word-show-2">
+                  <h1>完全可视化</h1>
+                  <h1>清晰易懂</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script src="assets/js/index.js"></script>
     </body>
 </html>
