@@ -117,7 +117,7 @@ var svg = d3.select("#second")
   			.attr("height", height);
 
 // 1. 读取文件
-d3.json("/api/table.json", function(error, jsondata){
+d3.json("/OOSA/api/table.json", function(error, jsondata){
   if(error) console.log(error);
 
   var xmax = d3.max(jsondata.data, function(d){

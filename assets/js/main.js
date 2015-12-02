@@ -113,7 +113,7 @@ $.getJSON('api/' + basetime + '.json', function(content){
     $('tbody').append(
       '<tr id = "'+ id +'" style="top: '+ ((i + 1) * spacing + existTop) +'px">'+
       '<td>'+ id +'</td>'+
-      '<td><a href="/product' + id +'">'+ brandName +'</a></td>'+
+      '<td><a href="product' + id +'.html">'+ brandName +'</a></td>'+
       '<td>'+ sales +'</td>'+
       '<td>'+ ' - ' +'</td>'+
       '<td>'+ ' - ' +'</td>'+
