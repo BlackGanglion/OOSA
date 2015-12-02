@@ -1,0 +1,17 @@
+{
+  "name": "test-express",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor app.js"
+  },
+  "author": "BlackGanglion",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "request": "^2.67.0"
+  }
+}
