@@ -74,7 +74,7 @@ API: php
 > 地址：/api/typelist.php
 ``` javascript
 {
-    "statue": 0,
+    "status": 0,
     "type": [
       {
         "id": 1,
@@ -154,7 +154,7 @@ API: php
 > 地址：/api/typelist.php?type=1
 ``` javascript
 {
-    "statue": 0,
+    "status": 0,
     "brand": [
       {
         "id": 1,
@@ -266,7 +266,7 @@ API: php
 > 地址：/api/search.php
 ``` javascript
 {
-    "statue": 0,
+    "status": 0,
     "product": [
       {
         "id": 1,
