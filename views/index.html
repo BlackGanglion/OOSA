@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>基于海淘的数据分析与可视化</title>
         <link rel="stylesheet" href="/stylesheets/normalize.css" media="screen">
         <link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css" media="screen">
         <link rel="stylesheet" href="/stylesheets/index.css" media="screen">
@@ -10,29 +11,19 @@
         <div class="search">
           <h1 class="title">基于海淘的数据分析与可视化</h1>
           <div class="search-main">
-            <div class="select-type">
-              <div class="select-element active" id="select-brand">
-                <span>品牌</span>
+            <form action="#" method="post" name="search-content" id="submit">
+              <div class="search-inputAndResult">
+                <input class="search-input" name="key" type="search" placeholder=" 搜索 产品/品牌/店铺/类别">
+                <div class="search-result" id="result">
+                </div>
               </div>
-              <div class="select-element" id="select-shop">
-                <span>店铺</span>
-              </div>
-            </div>
-            <form action="#" method="post" name="search-content" id="submit-brand">
-              <input class="search-input" name="wenben" type="search" placeholder="请输入品牌名称">
-              <button class="search-submit" type="submit" name="button">搜索</button>
-            </form>
-            <form action="#" method="post" name="search-content" id="submit-shop" class="hide">
-              <input class="search-input" name="wenben" type="search" placeholder="请输入店铺名称">
               <button class="search-submit" type="submit" name="button">搜索</button>
             </form>
             <ul>
               <li>热门搜索:</li>
-              <li><a href="/milk-powder">奶粉</a></li>
-              <li><a href="#">纸尿裤</a></li>
-              <li><a href="#">玩具</a></li>
-              <li><a href="#">奶瓶</a></li>
-              <li><a href="#">液体钙</a></li>
+              <% data.type.forEach(function(e){ %>
+                <li ><a href="/type?id=<%= e.id %>"><%= e.name %></a></li>
+              <% }) %>
             </ul>
           </div>
         </div>
@@ -90,7 +81,8 @@
         </div>
 
     <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/index-jquery.js"></script>
     <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-    <script src="/javascripts/index.js"></script>
+    <script src="/javascripts/index-echarts.js"></script>
     </body>
 </html>

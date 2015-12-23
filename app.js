@@ -15,18 +15,14 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-  /*
-  request('http://127.0.0.1/test-api/typelist.php', function (error, response, body) {
+  request('http://127.0.0.1:3000/api/type.json', function (error, response, body) {
     data = JSON.parse(body);
     if (!error && response.statusCode == 200 && data.status == 0) {
-      res.render('type', {
-        'title': 'api-test',
-        'data': data
+      res.render('index',{
+        type: data.type
       });
     }
   });
-  */
-  res.render('index');
 });
 
 app.get('/milk-powder', function(req, res) {
@@ -43,6 +39,11 @@ app.get('/leibie', function(req, res) {
 
 app.get('/qixia', function(req, res) {
   res.render('qixia');
+});
+
+app.get('/type', function(req, res) {
+  //console.log(req.query.id);
+  res.render('type');
 });
 
 /*

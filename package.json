@@ -1,11 +1,12 @@
 {
-  "name": "test-express",
-  "version": "1.0.0",
+  "name": "OOSA",
+  "version": "1.1.0",
   "description": "test",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "supervisor app.js"
+    "test": "supervisor app.js",
+    "start": "forever start app.js",
+    "stop": "forever stop app.js"
   },
   "author": "BlackGanglion",
   "license": "ISC",

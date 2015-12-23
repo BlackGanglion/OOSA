@@ -1,33 +1,3 @@
-$(document).ready(function(){
-  $('.show-element img').animate({
-    opacity: 0.8
-  }, "slow");
-  $('.data-word-show-1').animate({
-    left: "37%",
-    opacity: 1
-  }, "slow");
-  $('.data-word-show-2').animate({
-    right: "49%",
-    opacity: 1
-  }, "slow");
-
-  $('#select-brand').on('click', function(){
-    $('#select-shop').removeClass('active');
-    $('#submit-shop').addClass('hide');
-
-    $('#select-brand').addClass('active');
-    $('#submit-brand').removeClass('hide');
-  });
-
-  $('#select-shop').on('click', function(){
-    $('#select-brand').removeClass('active');
-    $('#submit-brand').addClass('hide');
-
-    $('#select-shop').addClass('active');
-    $('#submit-shop').removeClass('hide');
-  })
-});
-
 require.config({
   paths: {
     echarts: 'http://echarts.baidu.com/build/dist'

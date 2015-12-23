@@ -27,12 +27,27 @@ h1, div{
   margin: 40px auto 0px auto;
 }
 
-.search-input{
+.search-inputAndResult{
+  display: inline-block;
   width: 79%;
+  position: relative;
+}
+
+.search-result{
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.search-input{
+  width: 100%;
   height: 32px;
   line-height: 1.43;
   border: 1px;
-  border-radius: 0px 5px 5px 5px;
+  border-radius: 5px;
 }
 
 .search-submit{
@@ -45,14 +60,14 @@ h1, div{
   border-radius: 5px;
 }
 
-ul{
+.search-main > ul{
   padding: 10px 0 100px 0;
   margin-top: 16px;
   margin-bottom: 0px;
   text-align: center;
 }
 
-ul li{
+.search-main > ul li{
   margin: 0 7px;
   display: inline-block;
   text-decoration: none;
@@ -60,9 +75,44 @@ ul li{
   color: red;
 }
 
-ul li a{
+.search-main > ul li a{
   text-decoration: none;
   color: white;
+}
+
+.search-result > ul{
+  padding-left: 0px;
+  padding-top: 5px;
+}
+
+.search-result > ul li{
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.search-result > ul li:first-child{
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #eee;
+  padding-left: 15px;
+}
+
+.search-result > ul li:not(:first-child):hover{
+  background-color: #31b0d5;
+}
+
+.search-result > ul li a:hover{
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+.search-result > ul li{
+  list-style: none;
 }
 
 .show-img{
