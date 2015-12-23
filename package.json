@@ -13,6 +13,10 @@
   "dependencies": {
     "ejs": "^2.3.4",
     "express": "^4.13.3",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "tinify": "^1.1.1"
+  },
+  "devDependencies": {
+    "node-smushit": "^0.5.1"
   }
 }

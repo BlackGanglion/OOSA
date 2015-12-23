@@ -7,9 +7,25 @@
       <link rel="stylesheet" href="/stylesheets/type.css" media="screen">
     </head>
     <body>
-      <center>
-        <h1>同类品牌</h1>
-      </center>
+    <center><h1>同类品牌</h1></center>
+        <div class="tu">
+          <div id="tu1">
+          <ul>
+              <li style="left:0px;"><img src="/images/诺优能背景.jpg" style="width:1024px;height:300px;"></li>
+              <li><img src="/images/纸尿裤背景.png" style="width:1024px;height:300px;"></li>
+              <li><img src="/images/爱他美.png" style="width:1024px;height:300px;"></li>
+              <li><img src="/images/棉被.png" style="width:1024px;height:300px;"></li>
+          </ul>
+          </div>
+        </div>
+        <div class="yuan">
+          <ul>
+              <li><div style="width:12px;height:12px;border-radius:6px;background:black;"></div></li>
+              <li><div style="width:12px;height:12px;border-radius:6px;background:#717171;"></div></li>
+              <li><div style="width:12px;height:12px;border-radius:6px;background:#717171;"></div></li>
+              <li><div style="width:12px;height:12px;border-radius:6px;background:#717171;"></div></li>
+          </ul>
+        </div>
       <div class="milk">
         <h3>奶粉 热门品牌 <span style="color:#D3D3D3">hot brand</span></h3>
         <hr>
@@ -42,5 +58,30 @@
       </div>
 
       <script type="text/javascript" src="/javascripts/jquery.min.js" /></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          var d=0;
+          var z=0;
+          $(".yuan ul li").click(function(){
+          z=d;
+          d=$(this).index();
+          $(this).find("div").css("background","black");
+          if(d!=z)
+          $(".yuan ul li").eq(z).find("div").css("background","#717171");
+          if(d>z)
+          {
+              $(".tu ul li").eq(z).animate({left:"-100%"},500);
+              $(".tu ul li").eq(d).css("left","100%");
+              $(".tu ul li").eq(d).animate({left:"0px"},500);
+          }
+          if(d<z)
+          {
+              $(".tu ul li").eq(z).animate({left:"100%"},500);
+              $(".tu ul li").eq(d).css("left","-100%");
+              $(".tu ul li").eq(d).animate({left:"0px"},500);
+          }
+      });
+      });
+    </script>
     </body>
 </html>
