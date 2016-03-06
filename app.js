@@ -46,7 +46,6 @@ app.get('/type', function(req, res) {
   res.render('type');
 });
 
-/*
 // 404 catch-all handler (middleware)
 app.use(function(req, res, next){
 	res.status(404);
@@ -59,7 +58,6 @@ app.use(function(err, req, res, next){
 	res.status(500);
 	res.render('500');
 });
-*/
 
 app.listen(app.get('port'), function(){
   console.log( 'Express started on http://localhost:' +
