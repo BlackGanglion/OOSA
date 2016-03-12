@@ -1,9 +1,11 @@
 var express = require('express');
 var path = require('path');
 var request = require('request');
+var compression = require('compression');
 
 var app = express();
 
+app.use(compression());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'ejs');
