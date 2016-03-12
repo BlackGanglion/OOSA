@@ -25,25 +25,14 @@ app.get('/', function(req, res) {
   });
 });
 
-app.get('/milk-powder', function(req, res) {
-  res.render('milk-powder');
-});
-
-app.get('/product1', function(req, res) {
-  res.render('product1');
-});
-
-app.get('/leibie', function(req, res) {
-  res.render('leibie');
-});
-
-app.get('/qixia', function(req, res) {
-  res.render('qixia');
+app.get('/product/:id', function(req, res) {
+  res.render('product' + req.params.id);
 });
 
 app.get('/type', function(req, res) {
-  //console.log(req.query.id);
-  res.render('type');
+  if(req.query.id == 1) {
+    res.render('milk-powder');
+  }
 });
 
 // 404 catch-all handler (middleware)

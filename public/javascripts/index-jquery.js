@@ -30,10 +30,10 @@ var getResultList = function(){
   $.getJSON('../api/index.json', function(result){
     if(result.status == 1) return;
     var allResult = '',
-        list = [{0: '产品', 1: 'product.html'},
-                {0: '品牌', 1: 'brand.html'},
-                {0: '类别', 1: 'type.html'},
-                {0: '店铺', 1: 'shop.html'}],
+        list = [{0: '产品', 1: 'product'},
+                {0: '品牌', 1: 'brand'},
+                {0: '类别', 1: 'type'},
+                {0: '店铺', 1: 'shop'}],
         i = 0;
     $.each(result, function(key, element){
       if(key == 'status') return;
